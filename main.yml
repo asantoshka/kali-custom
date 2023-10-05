@@ -1,8 +1,9 @@
 ---
-- name: "Customizing Parrot"
+- name: "Customizing Kali"
   hosts: localhost
   connection: local
   roles:
+    - role: "roles/install-tools"
     - role: gantsign.visual-studio-code
       users:
         - username: "{{ ansible_user_id }}" 

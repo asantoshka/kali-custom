@@ -1,0 +1,6 @@
+---
+- name: "Downloading golang tools"
+  shell: "go install github.com/{{ item.repo }}@latest"
+  loop:
+    - { repo: "tomnomnom/gron" }
+    - { repo: "ropnop/kerbrute" }
